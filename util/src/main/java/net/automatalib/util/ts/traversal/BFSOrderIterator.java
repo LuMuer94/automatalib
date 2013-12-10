@@ -28,12 +28,12 @@ import net.automatalib.util.traversal.VisitedState;
 
 public class BFSOrderIterator<S, I> implements Iterator<S> {
 	
-	private final Collection<? extends I> inputs;
+	private final Iterable<? extends I> inputs;
 	private final SimpleTS<S, I> ts;
 	private final Queue<S> bfsQueue = new ArrayDeque<S>();
 	private final MutableMapping<S,VisitedState> seen;
 	
-	public BFSOrderIterator(SimpleTS<S,I> ts, Collection<? extends I> inputs) {
+	public BFSOrderIterator(SimpleTS<S,I> ts, Iterable<? extends I> inputs) {
 		this.ts = ts;
 		this.inputs = inputs;
 		Collection<? extends S> initial = ts.getInitialStates();
@@ -69,7 +69,6 @@ public class BFSOrderIterator<S, I> implements Iterator<S> {
 				}
 			}
 		}
-		
 		return state;
 	}
 

@@ -18,14 +18,16 @@ package net.automatalib.util.traversal;
 
 /**
  * Enum to use for coloring nodes/states during traversal.
- * <p>
- * Note that this enum only declares two values. The value {@link #WHITE} for unvisited nodes/states
- * is identified with <tt>null</tt>.
+ * 
  *  
  * @author Malte Isberner <malte.isberner@gmail.com>
  *
  */
 public enum Color {
+	/**
+	 * Color for nodes/states that have not yet been discovered.
+	 */
+	WHITE,
 	/**
 	 * Color for nodes/states that have been discovered, but not yet fully explored.
 	 */
@@ -33,10 +35,5 @@ public enum Color {
 	/**
 	 * Color for nodes/states that have been fully explored.
 	 */
-	BLACK;
-	
-	/**
-	 * Color for nodes/states that have not yet been discovered.
-	 */
-	public static final Color WHITE = null;
+	BLACK
 }

@@ -321,30 +321,30 @@ public class Automata extends TS {
 	
 	
 	
-	public static <S,I>
-	Iterator<TransRef<S,I>> allDefinedTransitionsIterator(
-			DeterministicAutomaton<S, I, ?> automaton,
+	public static <S,I,T>
+	Iterator<TransRef<S,I,T>> allDefinedTransitionsIterator(
+			DeterministicAutomaton<S, I, T> automaton,
 			Iterable<? extends I> inputs) {
 		return allDefinedTransitionsIterator(automaton, automaton.iterator(), inputs);
 	}
 	
-	public static <S,I>
-	Iterable<TransRef<S,I>> allDefinedTransitions(
-			DeterministicAutomaton<S, I, ?> automaton,
+	public static <S,I,T>
+	Iterable<TransRef<S,I,T>> allDefinedTransitions(
+			DeterministicAutomaton<S, I, T> automaton,
 			Iterable<? extends I> inputs) {
 		return allDefinedTransitions(automaton, automaton, inputs);
 	}
 	
-	public static <S,I>
-	Iterator<TransRef<S,I>> allUndefinedTransitionsIterator(
-			DeterministicAutomaton<S, I, ?> automaton,
+	public static <S,I,T>
+	Iterator<TransRef<S,I,T>> allUndefinedTransitionsIterator(
+			DeterministicAutomaton<S, I, T> automaton,
 			Iterable<? extends I> inputs) {
 		return allUndefinedTransitionsIterator(automaton, automaton.iterator(), inputs);
 	}
 	
-	public static <S,I>
-	Iterable<TransRef<S,I>> allUndefinedTransitions(
-			DeterministicAutomaton<S, I, ?> automaton,
+	public static <S,I,T>
+	Iterable<TransRef<S,I,T>> allUndefinedTransitions(
+			DeterministicAutomaton<S, I, T> automaton,
 			Iterable<? extends I> inputs) {
 		return allUndefinedTransitions(automaton, automaton, inputs);
 	}
